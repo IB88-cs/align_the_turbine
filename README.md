@@ -67,4 +67,101 @@ An LLM acts as an interpretation layer to help explain techincal model outputs i
 ---
 ## Model Performance
 
-We compare the model's
+We compare the model's predicted wind speed against the actual recorded wind speed to evaluate its forecasting performance.
+
+### Actual vs Predicted Wind Spped
+
+Graph to be added here.
+
+### Evaluation
+
+- **MAE:** [add result]
+-  **RMSE:** [add result]
+-  **Prediction Horizon:** [add result]
+
+**MAE (Mean Absolute Error)** measures the average difference between predicted and actual wind speed.
+
+**RMSE (Root Mean Squared Error)** also measures prediction error but gives greater weight to larger errors.
+
+---
+## COP31 Alignment
+
+Our project addresses the **COP31 Electrification** priority.
+
+Electrifying transportm buildings and industry can reduce dependence on fossil fuels, but this transistion also increases the important of efficient and reliable low-emission electricity generation.
+
+By exploring how predictive modelling could support more effective utilisation of wind energy, our project demonstrates how technology can contribute to the trasition towards an increasingly electrified, low-emission energy system.
+
+---
+## Why It Matters
+
+Climate action is not only a technical problem.
+
+From an environmental politics perspective, the transition towards renewable energy also involves **energy security, sustainable development, resource allocation and environmental justice**.
+
+Increasing the effective use of wind energy can contribute to reducing dependence on fossil fuels, it may also reduce pressure on some land-intensive energy pathways, including crop-based biofuels that can compete with agricultural resources and food production.
+
+We also recognise that access to data does not necessarily mean access to knowledge. Complex renewable-energy information can be difficlut for people without technical expertise to understnad.
+
+Our application therefore aims to make the same evidence accessible to users with different levels of technical knowledge.
+
+## Target Users
+
+### Wind Operators & Engineers
+
+Access technical wind forecasts, turbine information and model outputs.
+
+### Energy Organisations & Decision-Makers
+
+Understand renewable energy trends and potential system-level implications
+
+### Communities
+
+Access clear explanation of wind energy, forecasts and their relevance to the energy transition.
+
+---
+## Technology
+
+### Machine Learning
+
+### Backend
+
+### Frontend
+
+### LLM
+
+### Data
+
+---
+## Limitations
+
+This project is a **proof of concept developed during the hackathon**. 
+
+The model uses historical turbine data and has not been validated for autonomous control of real wind turbines.
+
+Real turbine operation involves additional engineering, environmental and safety constraints that are outside the scope of this prototype.
+
+The LLM is used to help interpret and communicate model outputs. It does not independently generate or validate turbine-control decisions.
+
+Further real-world testing and engineering validation would be required before the system could be used operationally.
+
+## Futre Development
+
+Future development could include:
+
+- Intergration with live turbine and weather data
+- Testing across different turbine models and locations
+- Further development of pitch-angle optimisation
+- Read Time prediction
+- Model uncertainty and confidence information
+- Testing with wind-energy professionals
+- Improved accessibility
+- Multilingual Support
+
+---
+## Team
+
+
+
+
+
