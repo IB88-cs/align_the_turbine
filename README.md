@@ -180,7 +180,7 @@ External tools and resouces used include:
 - AI coding/generation tools:
 - Other tools:
 
-All project specific development was completed during the hackathin period.
+All project specific development was completed during the hackathon period.
 
 ---
 ## Demo
