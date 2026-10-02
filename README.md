@@ -161,6 +161,36 @@ Future development could include:
 ---
 ## Team
 
+**Henriette Fung** - Documentation
+**name** - 
+**name** -
+**name** -
+
+---
+## Tools, Data & AI Disclosure
+
+This project was developed during **Climate Hack-tion 2026**.
+
+External tools and resouces used include:
+
+- Dataset: [name + source]
+- Machine Learning Libraries:
+- API:
+- LLM:
+- AI coding/generation tools:
+- Other tools:
+
+All project specific development was completed during the hackathin period.
+
+---
+## Demo
+
+**Demo video:** [link to be added]
+
+**Live application:** [link to be added]
+
+**Repository:** [link to be added]
+
 
 
 
