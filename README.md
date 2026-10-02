@@ -161,10 +161,10 @@ Future development could include:
 ---
 ## Team
 
-**Henriette Fung** - Documentation
-**name** - 
-**name** -
-**name** -
+- **Henriette Fung** - Documentation
+- **name** - 
+- **name** -
+- **name** -
 
 ---
 ## Tools, Data & AI Disclosure
