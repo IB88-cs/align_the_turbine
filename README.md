@@ -6,7 +6,7 @@ Built for Climate Hack-tion 2026 - Build for 2035
 COP31 Priority: **Electrification**
 
 ## The Problem
-As transport, buildings and industries become increasing electrified, reducing dependence on fossil fuels requires not only greater electricity genereation, but also more effective use of loww-emission energy sources.
+As transport, buildings and industries become increasingly electrified, reducing dependence on fossil fuels requires not only greater electricity genereation, but also more effective use of low-emission energy sources.
 
 Wind energy can support this transition, however wind conditions are inherently variable. Changes in wind speed and direction affect how turbines operate and how much electricity they can generate.
 
@@ -15,7 +15,7 @@ This led us to explore a simple question:
 > What if wind turbines could anticipate changing wind conditions instead of only reacting to them?
 
 ## Out Solution
-**Aligh the Turbine** is an AI-powered proof of concept that uses real-world wind turbine data to predict future wind conditions.
+**Align the Turbine** is an AI-powered proof of concept that uses real-world wind turbine data to predict future wind conditions.
 
 Our machine-learning model analyses historical wind and turbine data to forecast changes in wind conditions. These predictions can be used to explore how turbine settings, such as blade pitch, could respond proactively to improve energy capture.
 
@@ -88,9 +88,9 @@ Graph to be added here.
 
 Our project addresses the **COP31 Electrification** priority.
 
-Electrifying transportm buildings and industry can reduce dependence on fossil fuels, but this transistion also increases the important of efficient and reliable low-emission electricity generation.
+Electrifying transport, buildings and industry can reduce dependence on fossil fuels, but this transistion also increases the important of efficient and reliable low-emission electricity generation.
 
-By exploring how predictive modelling could support more effective utilisation of wind energy, our project demonstrates how technology can contribute to the trasition towards an increasingly electrified, low-emission energy system.
+By exploring how predictive modelling could support more effective utilisation of wind energy, our project demonstrates how technology can contribute to the transition towards an increasingly electrified, low-emission energy system.
 
 ---
 ## Why It Matters
@@ -145,7 +145,7 @@ The LLM is used to help interpret and communicate model outputs. It does not ind
 
 Further real-world testing and engineering validation would be required before the system could be used operationally.
 
-## Futre Development
+## Future Development
 
 Future development could include:
 
@@ -162,9 +162,9 @@ Future development could include:
 ## Team
 
 - **Henriette Fung** - Documentation
-- **name** - 
-- **name** -
-- **name** -
+- **Ishani Basu** - 
+- **Charan Pedireddi** -
+- **Ipsa Chatterjee** -
 
 ---
 ## Tools, Data & AI Disclosure
