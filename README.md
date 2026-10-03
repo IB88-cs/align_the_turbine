@@ -152,7 +152,7 @@ Future development could include:
 - Intergration with live turbine and weather data
 - Testing across different turbine models and locations
 - Further development of pitch-angle optimisation
-- Read Time prediction
+- Real Time prediction
 - Model uncertainty and confidence information
 - Testing with wind-energy professionals
 - Improved accessibility
