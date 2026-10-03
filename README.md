@@ -52,7 +52,7 @@ The predicted wind conditions can be combined with turbine operational data to e
 
 ### 4. API
 
-[Using the Open-Meteo API we have taken live data from the Chepstowe Windfarm, and used them to predict the data for the next window, that way we aren't just relying on historic data, but also making predictions based on the current conditions of a wind farm] 
+[Using the Open-Meteo API we have taken live data from the Chepstowe Windfarm, and used them to predict the data for the next window, that way we aren't just relying on historic data, but also making predictions based on the current conditions of a wind farm. There is no API key needed and it is free for non-commercial use] 
 
 Our model is connected to the application through an API, allowing predictions to be requested and displayed through the user interface.
 
@@ -66,33 +66,40 @@ Our application therefore aims to provide different views for:
 - **Energy organisations and decision-makers** - System-level renewable energy insights
 - **Communities and non-technical users** - clear, accessible explanations
 
-An LLM acts as an interpretation layer to help explain techincal model outputs in language appropriate to different users.
+An LLM acts as an interpretation layer to help explain technical model outputs in language appropriate to different users.
 
 ---
 ## Model Performance
 
 We compare the model's predicted wind speed against the actual recorded wind speed to evaluate its forecasting performance.
 
-### Actual vs Predicted Wind Spped
+### Actual vs Predicted Wind Speed
 
 Graph to be added here.
 
 ### Evaluation
 
-- **MAE:** [add result]
--  **RMSE:** [add result]
--  **Prediction Horizon:** [add result]
+**wind forecast model**
+- mean absolute error: 0.563 m/s
+- root mean squared error: 0.747 m/s
+- prediction horizon: 1 (next 10 mins)
 
-**MAE (Mean Absolute Error)** measures the average difference between predicted and actual wind speed.
+**original pitch model** (with rotor position, nacelle position - cuz irl we won't have these features in real time)
+- mean absolute error: 0.195°
+- root mean squared error: 0.746°
+- prediction horizon: 1 (next 10 mins)
 
-**RMSE (Root Mean Squared Error)** also measures prediction error but gives greater weight to larger errors.
+**simplified model** (only wind speed, wind direction) 
+- mean absolute error: 0.453°
+-  root mean squared error: 2.059°
+-  prediction horizon: 1 (next 10 mins)
 
 ---
 ## COP31 Alignment
 
 Our project addresses the **COP31 Electrification** priority.
 
-Electrifying transport, buildings and industry can reduce dependence on fossil fuels, but this transistion also increases the important of efficient and reliable low-emission electricity generation.
+Electrifying transport, buildings and industry can reduce dependence on fossil fuels, but this transition also increases the important of efficient and reliable low-emission electricity generation.
 
 By exploring how predictive modelling could support more effective utilisation of wind energy, our project demonstrates how technology can contribute to the transition towards an increasingly electrified, low-emission energy system.
 
@@ -105,11 +112,17 @@ From an environmental politics perspective, the transition towards renewable ene
 
 Increasing the effective use of wind energy can contribute to reducing dependence on fossil fuels, it may also reduce pressure on some land-intensive energy pathways, including crop-based biofuels that can compete with agricultural resources and food production.
 
-We also recognise that access to data does not necessarily mean access to knowledge. Complex renewable-energy information can be difficlut for people without technical expertise to understnad.
+We also recognise that access to data does not necessarily mean access to knowledge. Complex renewable-energy information can be difficult for people without technical expertise to understand.
 
 Our application therefore aims to make the same evidence accessible to users with different levels of technical knowledge.
 
+So, predicting the wind gust's speed to be able to align the angles before the gust arrives is a field of research i.e. lidar-assisted feedforward pitch control. In this case a lidar is mounted on a nacelle/spinner to scan the wind 50-100 meters ahead and adjust the blades accordingly. However, this method is expensive, and the lidar preview is bounded by its scan range. 
+
+With our method of predicting using a ML model trained on historical wind data, it omits the hardware costs, and can provide longer horizons. Moreover, as an ML approach forecasts based on the data collected on-site, there is no per-turbine capital expenditure (Ajitha et al.)
+
 ## Target Users
+
+
 
 ### Wind Operators & Engineers
 
@@ -131,13 +144,13 @@ Access technical wind forecasts, turbine information and model outputs.
 ---
 ## Limitations
 
+- mainly that the MLP model isn't as accurate as CNN - an MLP model is just simpler to set up, and thus was used for prototype purposes
+
 This project is a **proof of concept developed during the hackathon**. 
 
 The model uses historical turbine data and has not been validated for autonomous control of real wind turbines.
 
 Real turbine operation involves additional engineering, environmental and safety constraints that are outside the scope of this prototype.
-
-The LLM is used to help interpret and communicate model outputs. It does not independently generate or validate turbine-control decisions.
 
 Further real-world testing and engineering validation would be required before the system could be used operationally.
 
@@ -148,19 +161,20 @@ Future development could include:
 - Intergration with live turbine and weather data
 - Testing across different turbine models and locations
 - Further development of pitch-angle optimisation
-- Real Time prediction
+- Real Time prediction - don't we already hv this??
 - Model uncertainty and confidence information
-- Testing with wind-energy professionals
+- Testing with wind-energy professionals - wdym??
 - Improved accessibility
-- Multilingual Support
+- Multilingual Support/ better usability
+- a CNN model used instead of MLP
 
 ---
 ## Team
 
-- **Henriette Fung** - Documentation
-- **Ishani Basu** - 
-- **Charan Pedireddi** -
-- **Ipsa Chatterjee** -
+- **Henriette Fung** - Documentation, pitch
+- **Ishani Basu** - Research, backend, training the model, idea design (team lead btw)
+- **Charan Pedireddi** - Frontend
+- **Ipsa Chatterjee** - Frontend
 
 ---
 ## Tools, Data & AI Disclosure
@@ -169,12 +183,11 @@ This project was developed during **Climate Hack-tion 2026**.
 
 External tools and resouces used include:
 
-- Dataset: [name + source]
-- Machine Learning Libraries:
-- API:
-- LLM:
-- AI coding/generation tools:
-- Other tools:
+- Dataset: [Kelmarsh wind farm data, published by Zenodo on Cubico Sustainable] - using the 2017 dataset
+- Machine Learning Libraries: scikit-learn 
+- API: Open-Meteo API
+- AI coding/generation tools: Claude
+- Other tools: 
 
 All project specific development was completed during the hackathon period.
 
