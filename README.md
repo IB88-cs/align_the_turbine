@@ -111,14 +111,6 @@ Our application therefore aims to make the same evidence accessible to users wit
 
 Access technical wind forecasts, turbine information and model outputs.
 
-### Energy Organisations & Decision-Makers
-
-Understand renewable energy trends and potential system-level implications
-
-### Communities
-
-Access clear explanation of wind energy, forecasts and their relevance to the energy transition.
-
 ---
 ## Technology
 
