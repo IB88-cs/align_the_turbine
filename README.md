@@ -15,7 +15,9 @@ This led us to explore a simple question:
 > What if wind turbines could anticipate changing wind conditions instead of only reacting to them?
 
 ## Out Solution
-**Align the Turbine** is an AI-powered proof of concept that uses real-world wind turbine data to predict future wind conditions.
+**Align the Turbine** is an ML-powered proof of concept that uses real-world wind turbine data to predict future wind conditions.
+
+[Trained a MLP (multi layer perceptron) model to predict the wind for the next 10 minutes (the next window). Even though predicting the wind and adjusting the wind is an active field of research and field-tested technology called lidar-assisted feedforward pitch control. But the key difference between our model and this technology, is that our model is trained to predict the gust for the next 10 minutes. ] - added by Ishani
 
 Our machine-learning model analyses historical wind and turbine data to forecast changes in wind conditions. These predictions can be used to explore how turbine settings, such as blade pitch, could respond proactively to improve energy capture.
 
@@ -42,13 +44,15 @@ Out model uses historical turbine data including:
 
 ### 2. Machine Learning
 
-The data is processed and used to train a machine-learning model that predicts future wind conditions.
+The data is processed and used to train a machine-learning model (MLP) that predicts future wind conditions.
 
 ### 3. Prediction Optimisation
 
 The predicted wind conditions can be combined with turbine operational data to explore how settings such as blade pitch could be adjusted proactively.
 
 ### 4. API
+
+[Using the Open-Meteo API we have taken live data from the Chepstowe Windfarm, and used them to predict the data for the next window, that way we aren't just relying on historic data, but also making predictions based on the current conditions of a wind farm] 
 
 Our model is connected to the application through an API, allowing predictions to be requested and displayed through the user interface.
 
