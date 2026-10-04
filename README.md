@@ -119,7 +119,7 @@ We also recognise that access to data does not necessarily mean access to knowle
 
 Our application therefore aims to make the same evidence accessible to users with different levels of technical knowledge.
 
-So, predicting the wind gust's speed to be able to align the angles before the gust arrives is a field of research i.e. lidar-assisted feedforward pitch control. In this case a lidar is mounted on a nacelle/spinner to scan the wind 50-100 meters ahead and adjust the blades accordingly. However, this method is expensive, and the lidar preview is bounded by its scan range. 
+So, predicting the wind gust's speed to be able to align the angles before the gust arrives is a field of research i.e. lidar-assisted feedforward pitch control. In this case a lidar is mounted on a nacelle/spinner to scan the wind 50-100 meters ahead and adjust the blades accordingly. However, relying on just this technology has limitations. For instance, in bad weather conditions a lidar mounted on the nacelle wouldn't be able to gauge wind data as well. Hence, having ML-based wind forecasting as backup overcomes this limitation. Thus we propose our model to be used alongside lidar-assisted technology.  
 
 With our method of predicting using a ML model trained on historical wind data, it omits the hardware costs, and can provide longer horizons. Moreover, as an ML approach forecasts based on the data collected on-site, there is no per-turbine capital expenditure (Ajitha et al.)
 
