@@ -20,7 +20,7 @@ The data model trained was an MLP model, and it was trained on the open Kelmarsh
 
 For the data training, the main libraries used were pandas and scikit-learn version 1.9 - mainly MLPRegressor to train and test the model. Before training the data, the data needed to be cleaned as there was invalid data entries, missing entries etc. For this we used the pandas library to wrangle the data. 
 
-At first the model we trained used other parameters
+At first the model we trained used other parameters apart from just the wind direction and the wind speed, such as rotor speed and nacelle position. However, this data will not be provided 
 
 
 
