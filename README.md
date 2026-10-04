@@ -14,14 +14,11 @@ This led us to explore a simple question:
 
 > What if wind turbines could anticipate changing wind conditions instead of only reacting to them?
 
-## Out Solution
+## Our Solution
 **Align the Turbine** is an ML-powered proof of concept that uses real-world wind turbine data to predict future wind conditions.
 
 [Trained a MLP (multi layer perceptron) model to predict the wind for the next 10 minutes (the next window). Even though predicting the wind and adjusting the wind is an active field of research and field-tested technology called lidar-assisted feedforward pitch control. But the key difference between our model and this technology, is that our model is trained to predict the gust for the next 10 minutes. ] - added by Ishani
 
-Our machine-learning model analyses historical wind and turbine data to forecast changes in wind conditions. These predictions can be used to explore how turbine settings, such as blade pitch, could respond proactively to improve energy capture.
-
-We are connecting the model to an accessible application through an API, allowing users to interact with the predictions without needing to work directly with raw data or machine-learning tools.
 
 Our approach is:
 
@@ -40,7 +37,7 @@ Out model uses historical turbine data including:
 - Power output
 - Blade pitch angle
 - Turbine operating status
-- Date and Time
+- Date and Time (10 minute intervals)
 
 ### 2. Machine Learning
 
