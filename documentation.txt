@@ -1,0 +1,15 @@
+UI
+The frontend for the Turbine Pitch Prediction System is built as a dashboard using FastAPI. Designed with a clean dark theme, it acts as a real-time monitoring center where users can track wind conditions, review machine learning predictions, and inspect a live 3D model of the turbine in action.
+
+The top of the dashboard features a navigation header that lets you switch between Replay Mode (using recorded data) and Live Mode (polling real-time weather APIs). From here, you can manually step through data, turn on auto-streaming to run continuous predictions, or reset the stream. Live source badges pulse on-screen to indicate when real-time data is flowing.
+
+Below the header, the interface splits into two main sections. On the left, a metrics grid displays live key performance indicators—such as 10-minute forecasted wind speed, expected power output in kilowatts, and recommended blade pitch angles—paired with dynamic status captions. A Chart.js visualization sitting right beneath it tracks historical wind speeds alongside upcoming forecasts using custom shaded highlights to clearly distinguish actual data from prediction windows.
+
+On the right side, an interactive Three.js 3D visualizer renders the physical wind turbine. It loads a custom 3D model and dynamically adjusts the rotor’s spinning speed and blade pitch based on the incoming wind data and ML recommendations, providing a clear visual bridge between data predictions and physical physical motion.
+
+Building this UI came with a few tricky technical hurdles, especially when trying to combine real-time data streams with smooth 3D visuals on a single page.
+One of the biggest challenges was handling smooth real-time 3D animation inside Three.js. Synchronizing the rotor's spinning speed and blade movements with incoming API data meant preventing abrupt, jarring shifts every time new data arrived. To fix this, I had to implement linear interpolation (easing) so the 3D turbine gradually accelerates or decelerates toward the target wind speed instead of snapping instantly.
+Another issue was integrating dynamic forecast data into Chart.js. Standard chart components don't naturally separate historical facts from future predictions, so creating a clear visual distinction required writing a custom canvas plugin to draw shaded highlight regions across the x-axis for forecast windows, while keeping the datasets updating smoothly without redrawing the entire screen.
+Balancing performance and responsiveness also took significant effort. Running a webGL 3D canvas, live Chart.js rendering, and timed auto-streaming requests simultaneously can easily lag the browser if not optimized. I had to organize the dashboard using strict CSS grid layouts for zero-overflow containers and manage the update loops carefully so the client-side state stays light and performant even during long streaming sessions.
+
+
