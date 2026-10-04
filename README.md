@@ -5,6 +5,7 @@ Built for Climate Hack-tion 2026 - Build for 2035
 
 COP31 Priority: **Electrification**
 
+Note: the link for the pitch has the slides and recording, when watching, wait for the recording to finish before moving onto the next slide otherwise different recordings will overlap
 
 ## The Problem
 As transport, buildings and industries become increasingly electrified, reducing dependence on fossil fuels requires not only greater electricity generation, but also more effective use of low-emission energy sources.
