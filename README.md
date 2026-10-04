@@ -17,6 +17,11 @@ This led us to explore a simple question:
 ## Our Solution
 **Align the Turbine** is an ML-powered proof of concept that uses real-world wind turbine data to predict future wind conditions.
 
+1. **Forecasts** wind speed 10 minutes ahead from the last hour of readings (a small neural network, scikit-learn `MLPRegressor`).
+2. **Estimates the blade pitch** a turbine typically used in similar conditions (a second `MLPRegressor`).
+3. **Estimates the electricity output** for the forecast wind, using the average power curve of the turbine we have data for.
+4. **Explains it in plain language** in a dashboard, so non-technical viewers can follow wind speed, expected power and blade angle without reading raw data.
+
 [Trained a MLP (multi layer perceptron) model to predict the wind for the next 10 minutes (the next window). Even though predicting the wind and adjusting the wind is an active field of research and field-tested technology called lidar-assisted feedforward pitch control. But the key difference between our model and this technology, is that our model is trained to predict the gust for the next 10 minutes. ] - added by Ishani
 
 
@@ -54,16 +59,21 @@ The predicted wind conditions can be combined with turbine operational data to e
 Our model is connected to the application through an API, allowing predictions to be requested and displayed through the user interface.
 
 ### 5. Accessible Interface
+## What the dashboard shows
 
-Different users need different information from the same data.
+| Card / chart | What it means |
+|---|---|
+| Forecasted wind speed | The model's prediction for 10 minutes from now, with a plain-language label (light, moderate, strong wind) |
+| Expected power (estimate) | Forecast wind converted to kilowatts using the average power curve from the recorded turbine data. An estimate only |
+| Recommended pitch angle | The blade angle this turbine typically used in similar conditions (0° = flat to the wind, 90° = feathered) |
+| Wind speed graph | Recent measured wind (blue line), the next forecast (orange diamond) and, in Replay, what the model had predicted earlier for each time (orange circles) |
+| 3D turbine (Replay only) | An illustration. The rotor turns a little with each step, further in stronger wind |
 
-Our application therefore aims to provide different views for:
+**Two data modes**
 
-- **Wind operators and engineers** - Detailed technical information and predictions
-- **Energy organisations and decision-makers** - System-level renewable energy insights
-- **Communities and non-technical users** - clear, accessible explanations
+- **Replay** (default): steps through recorded 10-minute data from Kelmarsh turbine 1 (a continuous 9-day stretch, 24 Nov to 3 Dec 2017), as if it were arriving live.
+- **Live (demo)**: uses real-time wind near the Chepstowe wind farm, Victoria, from the free [Open-Meteo] API. The numbers are real calculations on that feed, but it is weather-model wind for the area, not a measurement at a turbine, so treat Live as a demonstration of the pipeline, not a validated result. Times are shown in Melbourne time (AEST/AEDT).
 
-An LLM acts as an interpretation layer to help explain technical model outputs in language appropriate to different users.
 
 ---
 ## Model Performance
