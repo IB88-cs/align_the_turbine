@@ -6,7 +6,7 @@ Built for Climate Hack-tion 2026 - Build for 2035
 COP31 Priority: **Electrification**
 
 ## The Problem
-As transport, buildings and industries become increasingly electrified, reducing dependence on fossil fuels requires not only greater electricity genereation, but also more effective use of low-emission energy sources.
+As transport, buildings and industries become increasingly electrified, reducing dependence on fossil fuels requires not only greater electricity generation, but also more effective use of low-emission energy sources.
 
 Wind energy can support this transition, however wind conditions are inherently variable. Changes in wind speed and direction affect how turbines operate and how much electricity they can generate.
 
@@ -35,7 +35,7 @@ Our approach is:
 Out model uses historical turbine data including:
 
 - Wind speed
-- Wind spped variability
+- Wind speed variability
 - Wind direction
 - Nacelle position
 - Rotor speed
@@ -122,6 +122,8 @@ Our application therefore aims to make the same evidence accessible to users wit
 So, predicting the wind gust's speed to be able to align the angles before the gust arrives is a field of research i.e. lidar-assisted feedforward pitch control. In this case a lidar is mounted on a nacelle/spinner to scan the wind 50-100 meters ahead and adjust the blades accordingly. However, this method is expensive, and the lidar preview is bounded by its scan range. 
 
 With our method of predicting using a ML model trained on historical wind data, it omits the hardware costs, and can provide longer horizons. Moreover, as an ML approach forecasts based on the data collected on-site, there is no per-turbine capital expenditure (Ajitha et al.)
+
+Ajitha, E., et al. “Data Driven Wind Speed Forecasting Techniques Using Machine Learning Methods.” 2025 International Conference on Inventive Computation Technologies (ICICT), IEEE, 23 Apr. 2025, pp. 178–184, ieeexplore.ieee.org/document/11005177. Accessed 3 Oct. 2026.
 
 ## Target Users
 
