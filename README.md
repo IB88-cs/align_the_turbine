@@ -184,10 +184,10 @@ This project was developed during **Climate Hack-tion 2026**.
 External tools and resouces used include:
 
 - Dataset: [Kelmarsh wind farm data, published by Zenodo on Cubico Sustainable] - using the 2017 dataset
-- Machine Learning Libraries: scikit-learn 
-- API: Open-Meteo API
+- Machine Learning Libraries: scikit-learn, pandas, NumPy, joblib, FastAPI, Uvicorn, Chart.js, Three.js. 3D turbine model: static/turbine.glb.
+- API: Open-Meteo API ((free, non-commercial use), https://open-meteo.com/
 - AI coding/generation tools: Claude
-- Other tools: 
+- Other tools: Canva for pitch slides, Jupyter notebooks for data wrangling and model training
 
 All project specific development was completed during the hackathon period.
 
