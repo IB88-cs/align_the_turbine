@@ -56,7 +56,6 @@ The predicted wind conditions can be combined with turbine operational data to e
 
 [Using the Open-Meteo API we have taken live data from the Chepstowe Windfarm, and used them to predict the data for the next window, that way we aren't just relying on historic data, but also making predictions based on the current conditions of a wind farm. There is no API key needed and it is free for non-commercial use] 
 
-Our model is connected to the application through an API, allowing predictions to be requested and displayed through the user interface.
 
 ### 5. Accessible Interface
 ## What the dashboard shows
