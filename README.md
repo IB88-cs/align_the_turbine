@@ -210,7 +210,7 @@ All project specific development was completed during the hackathon period.
 ---
 ## Demo
 
-**Demo video:** [link to be added]
+**Demo video:** https://drive.google.com/file/d/1mCTLnB10dgxn9SnTuKZMRmwXGQ5L4Pkw/view?usp=drive_link
 
 
 
