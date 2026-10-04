@@ -79,9 +79,6 @@ The predicted wind conditions can be combined with turbine operational data to e
 
 We compare the model's predicted wind speed against the actual recorded wind speed to evaluate its forecasting performance.
 
-### Actual vs Predicted Wind Speed
-
-Graph to be added here.
 
 ### Evaluation
 
