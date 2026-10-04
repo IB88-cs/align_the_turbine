@@ -5,6 +5,7 @@ Built for Climate Hack-tion 2026 - Build for 2035
 
 COP31 Priority: **Electrification**
 
+
 ## The Problem
 As transport, buildings and industries become increasingly electrified, reducing dependence on fossil fuels requires not only greater electricity generation, but also more effective use of low-emission energy sources.
 
@@ -133,6 +134,9 @@ Access technical wind forecasts, turbine information and model outputs.
 
 ---
 ## Installation steps/ Run it
+
+this is the link that opens the app without downloading anything, made with render
+https://align-the-turbine.onrender.com/
 
 ```bash
 pip install fastapi uvicorn scikit-learn joblib pandas numpy
