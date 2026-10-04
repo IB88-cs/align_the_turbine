@@ -90,7 +90,7 @@ Graph to be added here.
 - root mean squared error: 0.747 m/s
 - prediction horizon: 1 (next 10 mins)
 
-**original pitch model** (with rotor position, nacelle position - cuz irl we won't have these features in real time)
+**original pitch model** (with rotor position, nacelle position - in real life these position would not change for the turbine alongside live wind data)
 - mean absolute error: 0.195°
 - root mean squared error: 0.746°
 - prediction horizon: 1 (next 10 mins)
@@ -128,36 +128,43 @@ With our method of predicting using a ML model trained on historical wind data, 
 
 ## Target Users
 
-
-
 ### Wind Operators & Engineers
 
 Access technical wind forecasts, turbine information and model outputs.
 
 ---
-## Technology
+## Installation steps/ Run it
 
-### Machine Learning
+```bash
+pip install fastapi uvicorn scikit-learn joblib pandas numpy
+uvicorn app:app --reload
+# open http://127.0.0.1:8000
+```
 
-### Backend
+Files the app needs in the same folder: `app.py`, `static/turbine.glb`, `Kelmarsh_wrangled.csv`, `live_stream_data.csv`, `wind_forecast_model.pkl`, `wind_forecast_scaler.pkl`, `pitch_model.pkl`, `pitch_scaler.pkl`, and for Live mode `simplified_pitch_model.pkl` and `simplified_pitch_scaler.pkl`. The page loads Chart.js and Three.js from public CDNs, so the browser needs internet access. **[Note. the scikit-learn version the models were trained with is 1.9]**
 
-### Frontend
-
-
-### Data
+The notebooks in `notebooks/` cover data wrangling and model training. `make_simplified_scaler.py` rebuilds the scaler for the simplified pitch model.
 
 ---
 ## Limitations
 
 - mainly that the MLP model isn't as accurate as CNN - an MLP model is just simpler to set up, and thus was used for prototype purposes
 
-This project is a **proof of concept developed during the hackathon**. 
+- This project is a **proof of concept developed during the hackathon**. 
 
-The model uses historical turbine data and has not been validated for autonomous control of real wind turbines.
+- The model uses historical turbine data and has not been validated for autonomous control of real wind turbines.
 
-Real turbine operation involves additional engineering, environmental and safety constraints that are outside the scope of this prototype.
+- Real turbine operation involves additional engineering, environmental and safety constraints that are outside the scope of this prototype.
 
-Further real-world testing and engineering validation would be required before the system could be used operationally.
+- Further real-world testing and engineering validation would be required before the system could be used operationally.
+  
+- Live mode uses weather-model wind at a nearby location, not turbine readings. It uses a gust-based stand-in for wind variability, receives about 15-minute spacing while the models were trained on 10-minute data, and takes a while to fill its first readings.
+  
+- The pitch recommendation is not validated against power output, and the 3D model cannot show real per-blade pitch.
+  
+- This idea works in theory, but hasn't been tested in practice, so the power outputs may be different to the expectations.
+  
+- Due to data cleaning, there is a gap in 3% of the forecast model's training window, so closing the gap is an improvement to be made. 
 
 ## Future Development
 
@@ -177,9 +184,9 @@ Future development could include:
 ## Team
 
 - **Henriette Fung** - Documentation, pitch, research
-- **Ishani Basu** - Research, backend, training the model, idea design (team lead btw)
-- **Charan Pedireddi** - Frontend
-- **Ipsa Chatterjee** - Frontend
+- **Ishani Basu** - Research, backend, training the model, idea design (team lead btw), pitch
+- **Charan Pedireddi** - Frontend, demo video
+- **Ipsa Chatterjee** - Frontend, demo video, 
 
 ---
 ## Tools, Data & AI Disclosure
@@ -191,7 +198,7 @@ External tools and resouces used include:
 - Dataset: [Kelmarsh wind farm data, published by Zenodo on Cubico Sustainable] - using the 2017 dataset
 - Machine Learning Libraries: scikit-learn, pandas, NumPy, joblib, FastAPI, Uvicorn, Chart.js, Three.js. 3D turbine model: static/turbine.glb.
 - API: Open-Meteo API ((free, non-commercial use), https://open-meteo.com/
-- AI coding/generation tools: Claude
+- AI coding/generation tools: Claude was used for coding assistance on the dashboard and API
 - Other tools: Canva for pitch slides, Jupyter notebooks for data wrangling and model training
 
 All project specific development was completed during the hackathon period.
@@ -201,9 +208,9 @@ All project specific development was completed during the hackathon period.
 
 **Demo video:** [link to be added]
 
-**Live application:** [link to be added]
 
-**Repository:** [link to be added]
+
+
 
 
 
