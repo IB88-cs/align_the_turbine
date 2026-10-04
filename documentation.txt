@@ -14,5 +14,6 @@ Another issue was integrating dynamic forecast data into Chart.js. Standard char
 
 Balancing performance and responsiveness also took significant effort. Running a webGL 3D canvas, live Chart.js rendering, and timed auto-streaming requests simultaneously can easily lag the browser if not optimized. I had to organize the dashboard using strict CSS grid layouts for zero-overflow containers and manage the update loops carefully so the client-side state stays light and performant even during long streaming sessions.
 
+## for the further UI explanation, refer to the all_ze_apps_breakdown pdf that contains images of the ui and basically progress document
 
 
