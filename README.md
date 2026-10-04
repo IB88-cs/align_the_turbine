@@ -171,7 +171,7 @@ Future development could include:
 ---
 ## Team
 
-- **Henriette Fung** - Documentation, pitch
+- **Henriette Fung** - Documentation, pitch, research
 - **Ishani Basu** - Research, backend, training the model, idea design (team lead btw)
 - **Charan Pedireddi** - Frontend
 - **Ipsa Chatterjee** - Frontend
