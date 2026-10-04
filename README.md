@@ -144,7 +144,6 @@ Access technical wind forecasts, turbine information and model outputs.
 
 ### Frontend
 
-### LLM
 
 ### Data
 
